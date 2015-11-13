@@ -1,0 +1,141 @@
+<!-- Welcome to Environment Management Portal -->
+<!--Name - Ronak Shah, Maria Sanober -->
+<!--Page - index.htm-->
+
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<meta charset = "utf-8"/>
+			<meta name = "description"		content = "Index Page"/>
+			<meta name = "author"	content = "Ronak Shah, Maria Sanober"/>
+			<title>Environment Management Portal </title>
+			<!-- CSS file address -->
+			 <link type="text/css" href="css/style.css" rel="stylesheet" />
+			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			 <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"></style>
+			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+			 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+			 <script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+			 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			 <script type="text/javascript" src="https://modernizr.com/downloads/modernizr-latest.js"></script>
+			<script src="js/scriptBooking.js"></script>
+			
+		</head>
+		
+		<body>
+		<div class='container'>
+			<!-- BEGIN: Header -->
+			<div id="header_logo">
+				
+				<img src="image/Tabcorp_Logo.jpg" alt="Tabcorp Logo"><!-- #001F3D -->
+				
+			</div>
+			
+			<div id="header_container">
+				<h1>Environment Management Portal</h1>
+			</div>	
+			
+			<!-- END: Header -->
+			
+			<!-- BEGIN: Header --> 
+			 <div id="cssmenu">
+				<ul>
+				   <li class='active'><a href='booking.htm'><span>Booking</span></a></li>
+					<li><a href='calendar.htm'><span>Calendar</span></a></li>
+				   <li><a href='project.htm'><span>Project</span></a></li>
+				  
+				   <li class='last'><a href='admin.htm' id = "admin" ><span>Admin</span></a></li>
+				</ul>
+			</div>
+			 <!-- END: Page Content -->
+			 
+			<!-- BEGIN: Page Content -->
+			<div id= "middle">
+				</br>
+				</br>
+				<div id="booking_form">
+					
+					<form class = "admin_form">
+
+							<label for = "get_project_name">Select Project: </label>
+							<select name = "get_project_name" id = "get_project_name"  required = "required" >
+								<option value = "Select" id = "select" >Select</option>
+							</select>
+					</form>
+					
+					
+				<div id = "display_booking">
+					<div id = "editButtons">
+					<form>
+					<!--  <button type="button" class="btn-xs btn-default" data-toggle="modal" data-target="#editReleaseModal"><i class="fa fa-plus"></i></button> -->
+					<!--   <button type="button" class="btn-xs btn-default" data-toggle="modal" data-target="#editReleaseModal"><i class="fa fa-trash-o fa-lg"></i></button>-->
+					 <button type="button" id = 'edit_booking' class="btn-xs btn-default" data-toggle="modal" data-target="#editBookingModal"><i class="fa fa-wrench fa-lg"></i></button> 
+					</br>
+					</br>
+								<div class = "booking_table">
+									
+								</div>
+								</br>
+					</form>
+					</div>
+								  <!-- edit Modal -->
+		  <div class="modal fade" id="editBookingModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Change Booking Dates</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="book">
+						<form class = "admin_form">
+						
+						<label for = "edit_booking_proj_name">Project Name
+						<input type = "text" name = "edit_booking_proj_name" id = "edit_booking_proj_name" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_booking_release_pkg">Release Package
+						<input type = "text" name = "edit_booking_release_pkg" id = "edit_booking_release_pkg" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_booking_testing_phase">Testing Phase
+						<input type = "text" name = "edit_booking_testing_phase" id = "edit_booking_testing_phase" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_booking_startDate">Start date</label>
+						<input type = "date" id = "edit_booking_startDate" class = "date" name = "edit_booking_startDate"/>	
+						</br>	
+						
+						<label for = "edit_booking_endDate">End date</label>
+						<input type = "date" id = "edit_booking_endDate" class = "date" name = "edit_booking_endDate"/>
+						
+						</br>
+					<input type="button" value="Update" data-dismiss="modal" id = "update_booking"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+				
+				</div>
+				</div>
+				</br>
+				</br>
+			<!-- END: Page Content -->
+			 
+			<!-- BEGIN: Sticky Footer -->
+		</div>
+			<div id="footer_container">
+				
+					<p>&#169;Copyright Tabcorp Holdings Limited</p>
+				
+			</div>
+			<!-- END: Sticky Footer -->
+		</div>
+		</body>
+
+	</html>

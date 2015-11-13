@@ -1,0 +1,523 @@
+<!-- Welcome to Environment Management Portal -->
+<!--Name - Ronak Shah, Maria Sanober -->
+<!--Page - index.htm-->
+
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<meta charset = "utf-8"/>
+			<meta name = "description"		content = "Index Page"/>
+			<meta name = "author"	content = "Ronak Shah, Maria Sanober"/>
+			<title> Welcome to Environment Management Portal </title>
+			<!-- CSS file address -->
+			 <link type="text/css" href="css/style.css" rel="stylesheet" />
+			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			 <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"></style>
+			 
+			 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+			 <script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+			 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			 <script type="text/javascript" src="httpss://modernizr.com/downloads/modernizr-latest.js"></script>
+			<script src="js/scriptadmin.js"></script>
+			
+		</head>
+		
+		<body>
+		  <div class="container">
+			<!-- BEGIN: Header -->
+			<div id="header_logo">
+				<img src="image/Tabcorp_Logo.jpg" alt="Tabcorp Logo"><!-- #001F3D -->
+			</div>
+			
+			<div id="header_container">
+				<h1>Environment Management Portal</h1>
+			</div>
+			
+			
+			<!-- END: Header -->
+			
+			<!-- BEGIN: Header --> 
+			 <div id="cssmenu">	
+				<ul>
+				   <li><a href='booking.htm'><span>Booking</span></a></li>
+				   <li><a href='calendar.htm'><span>Calendar</span></a></li>			
+				   <li><a href='project.htm'><span>Project</span></a></li>
+				  				   <li class='active'><a href='admin.htm'><span>Admin</span></a></li>
+				</ul>
+			</div>
+			 <!-- END: Page Content -->
+			 
+			<!-- BEGIN: Page Content -->
+			
+				<div id = "middle" >
+				<div id="admin_content">
+					</br>
+					</br>
+						<form  class = "project_main_form">
+							<label for = "selection">Select Task: </label>
+							<select id = "selection">
+							  <option value="select" id="select">Select</option>							
+							  <option value="allocate" id="allocate">Allocate</option>
+							  <option value="release_package" id="release_package">Release Package</option>
+							  <option value="application" id="application">Application</option>
+							  <option value="testing_phase" id="testing_phase">Testing Phase</option>
+							  <option value="environment" id="environment">Environment</option>
+							  <option value="status" id="status">Status</option>
+							</select>
+						</form>
+					</br>
+			</div>
+			
+			<div id ="display_allocate">
+							
+			<form class = "admin_form">
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="edit_allocate" data-toggle="modal" data-target="#editAllocate">EDIT</button>
+		  <button type="button" class="delete_allocate">DELETE</button>
+			</br>
+					</br>
+								<div class = "allocate_table">
+									
+								</div>
+								</br>
+			</form>
+			
+		  <!-- edit Modal -->
+		  <div class="modal fade" id="editAllocate" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Edit Allocate</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="allco">
+						<form class = "admin_form">
+						
+						<label for = "edit_allocate_reqId">ReqID
+						<input type = "text" name = "edit_allocate_reqId" id = "edit_allocate_reqId" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_allocate_proj_name">Project Name
+						<input type = "text" name = "edit_allocate_proj_name" id = "edit_allocate_proj_name" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_allocate_release_pkg">Release Package
+						<input type = "text" name = "edit_allocate_release_pkg" id = "edit_allocate_release_pkg" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_allocate_environment">Environment</label>
+							<select name = "edit_allocate_environment" id = "edit_allocate_environment">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						</br>
+						
+						<label for = "edit_allocate_testing_phase">Testing Phase
+						<input type = "text" name = "edit_allocate_testing_phase" id = "edit_allocate_testing_phase" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_allocate_status">Status</label>
+							<select name = "edit_allocate_status" id = "edit_allocate_status">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						
+						</br>
+						<label for = "edit_allocate_application">Application
+						<input type = "text" name = "edit_allocate_application" id = "edit_allocate_application" disabled = "true"/></label>
+						</br>
+						
+						<label for = "edit_allocate_startDate">Start date</label>
+						<input type = "date" id = "edit_allocate_startDate" class = "date" name = "edit_allocate_startDate"/>	
+						</br>	
+						
+						<label for = "edit_allocate_endDate">End date</label>
+						<input type = "date" id = "edit_allocate_endDate" class = "date" name = "edit_allocate_endDate"/>
+						
+						</br>
+					<input type="button" value="Update" data-dismiss="modal" id = "update_allocate"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+			</div>
+			
+			
+			<div id ="display_release_package">
+					
+			<form class = "admin_form">
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_release_package" data-toggle="modal" data-target="#newReleaseModal">NEW</button>
+		  <button type="button" class="edit_release_package" data-toggle="modal" data-target="#editReleaseModal">EDIT</button>
+		  <button type="button" class="delete_release_package">DELETE</button>
+			</br>
+					</br>
+								<div class = "mytable">
+								
+								</div>
+								</br>
+			</form>
+			
+		  <!-- New Modal -->
+		  <div class="modal fade" id="newReleaseModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Add New Release Package</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="release1">
+									<form class = "admin_form">
+						<label for = "new_release_pkg_name">Release Package Name
+						<input type = "text" name = "new_release_pkg_name" id = "new_release_pkg_name"/></label>
+						<p id="release_pkg_error">This field is required.</p>
+						</br>
+						
+						<label for = "new_release_phase_name">Select Testing Phase</label>
+							<select name = "new_release_phase_name" id = "new_release_phase_name">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						<p id="release_phase_error">This field is required.</p>
+						</br>
+						<p>
+							<label for = "new_release_start_date">Start date:</label>
+							<input type = "date" id = "new_release_start_date" placeholder = "yyyy-mm-dd" class = "date" name = "new_release_start_date"/>
+									
+						</p>
+						
+						<p>
+							<label for = "new_release_end_date">End date:</label>
+							<input type = "date" id = "new_release_end_date" class = "date" name = "new_release_end_date"/>
+							<p id="release_end_date_error">This field is required.</p>
+						</p>
+						<input type="button" value="Add" data-dismiss="modal" id = "new_release"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+			
+		  <!-- edit Modal -->
+		  <div class="modal fade" id="editReleaseModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Edit Release Package</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="release">
+									<form class = "admin_form">
+						<label for = "edit_release_pkg_name">Release Package Name
+						<input type = "text" name = "edit_release_pkg_name" id = "edit_release_pkg_name" disabled = "true"/></label>
+						<p id="edit_release_pkg_error">This field is required.</p>
+						</br>
+						
+						<label for = "edit_release_phase_name">Select Testing Phase</label>
+							<select name = "edit_release_phase_name" id = "edit_release_phase_name" disabled = "true">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						<p id="edit_release_phase_error">This field is required.</p>
+						</br>
+						<p>
+							<label for = "edit_release_start_date">Start date:</label>
+							<input type = "date" id = "edit_release_start_date" class = "date" name = "edit_release_start_date"/>	
+						</p>
+						
+						<p>
+							<label for = "edit_release_end_date">End date:</label>
+							<input type = "date" id = "edit_release_end_date" class = "date" name = "edit_release_end_date"/>
+							<p id="edit_release_end_date_error">This field is required.</p>
+						</p>
+						<input type="button" value="Update" data-dismiss="modal" id = "update_release"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+					
+			
+			</div>
+			
+			<div id ="display_application">
+			<form class = "admin_form">
+			
+			</br>
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_application" data-toggle="modal" data-target="#newApplicationModal">NEW</button>
+		  <button type="button" class="edit_application" data-toggle="modal" data-target="#editApplicationModal">EDIT</button>
+		  <button type="button" class="delete_application">DELETE</button>
+			</br></br>
+								<div class = "application_table"></div>
+			</br>
+			</form>
+			
+			
+		  <!-- New Modal -->
+		  <div class="modal fade" id="newApplicationModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Add New Application</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="app">
+									<form class = "admin_form">
+						<label for = "new_app_name">Application Name</label>
+						<input type = "text" name = "new_app_name" id = "new_app_name" /></label>
+						<p id="app_name_error">This field is required.</p>
+						</br>
+						<label for = "new_app_environment">Environment</label>
+							<select name = "new_app_environment" id = "new_app_environment">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+							<p id="app_environment_error">This field is required.</p>
+						</br>
+						
+						<p>
+						<label for = "new_app_server">Server</label>
+						<input type = "text" name = "new_app_server" id = "new_app_server" /></label>
+						<p id="app_server_error">This field is required.</p>
+						</p>
+						
+						<p>
+							<label for = "new_app_version">Version</label>
+						<input type = "text" name = "new_app_version" id = "new_app_version" /></label>
+						<p id="app_version_error">This field is required.</p>
+						</p>
+						
+						<p>
+							<label for = "new_app_ip">IP</label>
+						<input type = "text" name = "new_app_ip" id = "new_app_ip" /></label>
+						<p id="app_ip_error">This field is required.</p>
+						</p>
+						
+						<p>
+							<label for = "new_app_category">Category</label>
+						<input type = "text" name = "new_app_category" id = "new_app_category" /></label>
+						<p id="app_category_error">This field is required.</p>
+						</p>
+						
+						<input type="button" value="Add" data-dismiss="modal" id = "new_application"/>
+					</div>
+					
+
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+			
+		  <!-- edit Modal -->
+		  <div class="modal fade" id="editApplicationModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Edit Application</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="app">
+									<form class = "admin_form">
+						<label for = "edit_app_name">Application Name</label>
+						<input type = "text" name = "edit_app_name" id = "edit_app_name" disabled = "true" /></label>
+						<p id="edit_app_name_error">This field is required.</p>
+						</br>
+						<label for = "edit_app_environment">Environment</label>
+							<select name = "edit_app_environment" id = "edit_app_environment" disabled = "true">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+							<p id="edit_app_environment_error">This field is required.</p>
+						</br>
+						<p>
+						<label for = "edit_app_server">Server</label>
+						<input type = "text" name = "edit_app_server" id = "edit_app_server" disabled = "true"/></label>
+						<p id="edit_app_server_error">This field is required.</p>
+						</p>
+						
+						<p>
+						<label for = "edit_app_version">Version</label>
+						<input type = "text" name = "edit_app_version" id = "edit_app_version" /></label>
+						<p id="edit_app_version_error">This field is required.</p>
+						</p>
+						
+						<p>
+						<label for = "edit_app_ip">IP</label>
+						<input type = "text" name = "edit_app_ip" id = "edit_app_ip" /></label>
+						<p id="edit_app_ip_error">This field is required.</p>
+						</p>
+						
+						<p>
+						<label for = "edit_app_category">Category</label>
+						<input type = "text" name = "edit_app_category" id = "edit_app_category" /></label>
+						<p id="edit_app_category_error">This field is required.</p>
+						</p>
+						
+						<input type="button" value="Update" data-dismiss="modal" id = "update_application"/>
+					</div>
+					
+
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+			
+			
+			<div id ="display_testing_phase">
+			
+				<form class = "admin_form">
+			
+			</br>
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_testing_phase" data-toggle="modal" data-target="#newTestingModal">NEW</button>
+		  <button type="button" class="delete_testing_phase" data-toggle="modal" data-target="#deleteEditModal">DELETE</button>
+			</br></br>
+											<div class = "testingPhaseTable"></div></br>
+				</form>			
+
+			
+					  <!-- edit Modal -->
+		  <div class="modal fade" id="newTestingModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Edit Release Package</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="testing">
+									<label for = "testing_name">New testing Phase Name
+						<input type = "text" name = "testing_name" id = "testing_name"/></label>
+						<p id="testing_phase_error">This field is required.</p>
+     
+						</br>
+						<input type="button" value="Add" data-dismiss="modal" id = "testing_submit"/>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+			</div>
+			<div id ="display_environment">
+			
+			<form class = "admin_form">
+			
+			</br>
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_environment" data-toggle="modal" data-target="#newEnvironmentModal">NEW</button>
+		  <button type="button" class="delete_environment" data-toggle="modal" data-target="#deleteEnvironmentModal">DELETE</button>
+			</br></br>
+											<div class = "environmentTable"></div></br>
+				</form>			
+
+			
+					  <!-- edit Modal -->
+		  <div class="modal fade" id="newEnvironmentModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Add New Envirnoment</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="env">
+									<label for = "envirnoment_name">New testing Phase Name
+						<input type = "text" name = "envirnoment_name" id = "envirnoment_name"/></label>
+						<p id="envirnoment_error">This field is required.</p>
+     
+						</br>
+						<input type="button" value="Add" data-dismiss="modal" id = "envirnoment_submit"/>
+							</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	 </div>
+	 
+	 <div id ="display_status">
+			
+			<form class = "admin_form">
+			
+			</br>
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_status" data-toggle="modal" data-target="#newStatusModal">NEW</button>
+		  <button type="button" class="delete_status" data-toggle="modal" data-target="#deleteStatusModal">DELETE</button>
+			</br></br>
+											<div class = "statusTable"></div></br>
+				</form>			
+
+			
+					  <!-- edit Modal -->
+		  <div class="modal fade" id="newStatusModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Add New Status</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="stat">
+									<label for = "status_name">New Status Name
+						<input type = "text" name = "status_name" id = "status_name"/></label>
+						<p id="status_error">This field is required.</p>
+     
+						</br>
+						<input type="button" value="Add" data-dismiss="modal" id = "status_submit"/>
+							</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	 </div>
+	 
+		</div>
+
+			<!-- END: Page Content -->
+			 
+			<!-- BEGIN: Sticky Footer -->
+			<div id="footer_container">
+				
+					<p>&#169;Copyright Tabcorp Holdings Limited</p>
+				
+			</div>
+				</div>	
+			<!-- END: Sticky Footer -->
+		
+		</body>
+
+	</html>

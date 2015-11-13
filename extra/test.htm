@@ -1,0 +1,167 @@
+<!-- Welcome to Environment Management Portal -->
+<!--Name - Ronak Shah, Maria Sanober -->
+<!--Page - index.htm-->
+
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<meta charset = "utf-8"/>
+			<meta name = "description"		content = "Index Page"/>
+			<meta name = "author"	content = "Ronak Shah, Maria Sanober"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title> Welcome to Environment Management Portal </title>
+			<!-- CSS file address -->
+			<link type="text/css" href="style.css" rel="stylesheet" />
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"></style>
+			  <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+			<script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			  <script type="text/javascript" src="httpss://modernizr.com/downloads/modernizr-latest.js"></script>
+				<script src="scripttest.js"></script>
+		</head>
+		
+		<body>
+		<div class="container">
+			<!-- BEGIN: Header -->
+			<div id="header_logo">
+				<img src="image/Tabcorp_Logo.jpg" alt="Tabcorp Logo"><!-- #001F3D -->
+			</div>
+			
+			<div id="header_container">
+				<h1>Environment Management Portal</h1>
+			</div>
+			
+			
+			<!-- END: Header -->
+			
+			<!-- BEGIN: Header --> 
+			 <div id="cssmenu">
+				<ul>
+				   <li><a href='booking.htm'><span>Booking</span></a></li>
+				   <li><a href='application.htm'><span>Application</span></a></li>
+				   <li><a href='project.htm'><span>Project</span></a></li>
+				   <li><a href='release.htm'><span>Release Package</span></a></li>
+				   <li class='active'><a href='admin.htm'><span>Admin</span></a></li>
+				</ul>
+			</div>
+			 <!-- END: Page Content -->
+			 
+			<!-- BEGIN: Page Content -->
+		
+		<div id= middle>
+			<form>
+			</br>
+		  <!-- Trigger the modal with a button -->
+		  <button type="button" class="new_release_package" data-toggle="modal" data-target="#newModal">NEW</button>
+		  <button type="button" class="edit_release_package" data-toggle="modal" data-target="#editModal">EDIT</button>
+		  <button type="button" class="delete_release_package" data-toggle="modal" data-target="#deleteModal">DELETE</button>
+			</br>
+								<div class = "mytable"></div>
+			
+			</form>
+			
+			
+		  <!-- New Modal -->
+		  <div class="modal fade" id="newModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Add New Release Package</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="release1">
+									<form>
+						<label for = "new_release_pkg_name">Release Package Name
+						<input type = "text" name = "new_release_pkg_name" id = "new_release_pkg_name"/></label>
+						<p id="release_pkg_error">This field is required.</p>
+						</br>
+						
+						<label for = "new_release_phase_name">Select Testing Phase</label>
+							<select name = "new_release_phase_name" id = "new_release_phase_name">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						<p id="release_phase_error">This field is required.</p>
+						</br>
+						<p>
+							<label for = "new_release_start_date">Start date:</label>
+							<input type = "date" id = "new_release_start_date" placeholder = "yyyy-mm-dd" class = "date" name = "new_release_start_date"/>
+									
+						</p>
+						
+						<p>
+							<label for = "new_release_end_date">End date:</label>
+							<input type = "date" id = "new_release_end_date" class = "date" name = "new_release_end_date"/>
+							<p id="release_end_date_error">This field is required.</p>
+						</p>
+						<input type="button" value="Save" id = "new_release"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+			
+		  <!-- edit Modal -->
+		  <div class="modal fade" id="editModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">Edit Release Package</h4>
+				</div>
+				<div class="modal-body">
+				  					<div id="release">
+									<form>
+						<label for = "edit_release_pkg_name">Release Package Name
+						<input type = "text" name = "edit_release_pkg_name" id = "edit_release_pkg_name"/></label>
+						<p id="edit_release_pkg_error">This field is required.</p>
+						</br>
+						
+						<label for = "edit_release_phase_name">Select Testing Phase</label>
+							<select name = "edit_release_phase_name" id = "edit_release_phase_name">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+						<p id="edit_release_phase_error">This field is required.</p>
+						</br>
+						<p>
+							<label for = "edit_release_start_date">Start date:</label>
+							<input type = "date" id = "edit_release_start_date" class = "date" name = "edit_release_start_date"/>	
+						</p>
+						
+						<p>
+							<label for = "edit_release_end_date">End date:</label>
+							<input type = "date" id = "edit_release_end_date" class = "date" name = "edit_release_end_date"/>
+							<p id="edit_release_end_date_error">This field is required.</p>
+						</p>
+						<input type="button" value="update" id = "update_release"/>
+					</form>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+		
+	</div>	
+			<!-- END: Page Content -->
+			 
+			<!-- BEGIN: Sticky Footer -->
+			<div id="footer_container">
+				
+					<p>&#169;Copyright Tabcorp Holdings Limited</p>
+				
+			</div>
+			<!-- END: Sticky Footer -->
+		
+		</body>
+
+	</html>

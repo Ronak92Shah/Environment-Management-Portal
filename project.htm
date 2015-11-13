@@ -1,0 +1,155 @@
+<!-- Welcome to Environment Management Portal -->
+<!--Name - Ronak Shah, Maria Sanober -->
+<!--Page - index.htm-->
+
+<!DOCTYPE html>
+	<html lang = "en">
+		<head>
+			<meta charset = "utf-8"/>
+			<meta name = "description"		content = "Index Page"/>
+			<meta name = "author"	content = "Ronak Shah, Maria Sanober"/>
+			<title> Welcome to Environment Management Portal </title>
+						<!-- CSS file address -->
+			 <link type="text/css" href="css/style.css" rel="stylesheet" />
+			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			 <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"></style>
+			 
+			 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
+			 <script type="text/javascript" src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+			 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			 <script type="text/javascript" src="httpss://modernizr.com/downloads/modernizr-latest.js"></script>
+			<script src="js/script.js"></script>
+			
+		</head>
+		
+		<body>
+		<div class="container">
+			<!-- BEGIN: Header -->
+			<div id="header_logo">
+				<img src="image/Tabcorp_Logo.jpg" alt="Tabcorp Logo"><!-- #001F3D -->
+			</div>
+			
+			<div id="header_container">
+				<h1>Environment Management Portal</h1>
+			</div>
+			
+			
+			<!-- END: Header -->
+			
+			<!-- BEGIN: Header --> 
+			 <div id="cssmenu">
+				<ul>
+				   <li><a href='booking.htm'><span>Booking</span></a></li>
+				   <li><a href='calendar.htm'><span>Calendar</span></a></li>				
+				   <li class='active'><a href='project.htm'><span>Project</span></a></li>
+				  
+				    <li class='last'><a href='admin.htm'><span>Admin</span></a></li>
+				</ul>
+			</div>
+			 <!-- END: Page Content -->
+			 
+			<!-- BEGIN: Page Content -->
+				<div id = 'middle'>
+									</br>
+					</br>	
+				<div id="form">
+					
+					<form class = "project_main_form">
+					
+							<label for = "project_name">Select Project: </label>
+							<select name = "project_name" id = "project_name"  required = "required" >
+								<option value = "Select" id = "select" >Select</option>
+							</select>
+							
+						<div id = "add_new_project">
+							
+							<label for = "new_project_name">Project Name
+							<input type = "text" class = "project_form" name = "new_project_name" id = "new_project_name" required = "required" </label>
+							<p id="new_project_name_error">This field is required.</p>
+					
+						<p>
+							<label for = "project_manager_name">Project Manager Name
+							<input type = "text" class = "project_form" name = "project_manager_name" id = "project_manager_name"  required = "required" </label>
+						</p>
+						<p>
+							<label for = "project_manager_email">Project Manager Email
+							<input type="email" name="project_manager_email" id = "project_manager_email" placeholder="local-part@domain-part" required = "required"/></label>
+						</p>
+						<p>	
+							<label for = "test_lead_name">Test Lead Name
+							<input type = "text" class = "project_form" name = "test_lead_name" id = "test_lead_name" required = "required" </label>
+						</p>
+						<p>
+							<label for = "test_lead_email">Test Lead Email
+							<input type="email" class = "project_form"name="test_lead_email" id = "test_lead_email" placeholder="local-part@domain-part" required = "required"/></label>
+						</p>
+						<p>
+							<label for = "description">Description
+							<textarea name="otherskills"
+							rows="4" cols="20" id = "description" name = "description">
+							 
+							</textarea>
+							</label>
+						</p>
+							
+						<p>Applications you need:
+						<div id = "add_apps">
+							
+						</div>
+						</p>	
+							
+						
+						<p>
+							<div id = "release_proj" style = "clear:both">
+							<label for = "release_package">Select Release Package: </label>
+							<select name = "release_package" id = "release_package">
+								<option value = "select" id = "select" >Select</option>
+							</select>
+							<p id="release_proj_error">This field is required.</p>
+						</div>
+							
+						<div id = "table">
+							<table>
+								<div id = "add_table">
+								</div>
+							</table>
+						</div>
+						
+						</p>
+						
+						</div>
+						<div id = "add_submit">
+						<p>
+							<!-- Button with on-click event, it will take flow of program to register.js -->
+							<input type="button"  value="Add Project" id = "submit_add"/>
+							
+						</p>
+						</div>
+						<div id = "update_submit">
+						<p>
+							<!-- Button with on-click event, it will take flow of program to register.js -->
+							<input type="button" value="Update Project" id = "submit_update"/>						
+						</p>
+						</div>
+						
+					</form>
+					
+				</div>
+				</br>
+				</br>
+			
+			<!-- END: Page Content -->
+			 
+			<!-- BEGIN: Sticky Footer -->
+			<div id="footer_container">
+				
+					<p>&#169;Copyright Tabcorp Holdings Limited</p>
+				
+			</div>
+			</div>
+			</div>
+			<!-- END: Sticky Footer -->
+		
+		</body>
+
+	</html>

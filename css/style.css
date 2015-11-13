@@ -1,0 +1,305 @@
+/*style.css
+author: Ronak Shah
+created: 21/08/2015
+last modified: 16/09/2015
+description: A style sheet for Project Name
+*/
+
+/* Reset body padding and margins */
+/*body { 
+	margin:0; 
+	padding:0; 
+	width : 80%;
+	margin:0 auto;
+	
+	}
+	*/
+	
+#booking_form{
+	
+		text-align: center;	
+	
+}	
+:invalid {
+  box-shadow: none;
+}
+ #admin_content{
+ align: center;
+ }
+/* Make Header Sticky */
+#header_logo {  
+			background-color: #00263B;
+			}
+					
+h1{
+	color: #001F3D;
+	text-align: center;	
+	}
+					
+@import url(http://fonts.googleapis.com/css?family=Capriola);
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  font-family: Capriola, Helvetica, sans-serif;
+}
+#cssmenu {
+  width: auto;
+  height: 59px;
+  padding-bottom: 4px;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one {
+  height: 10px;
+  background: #001F3D;
+}
+#cssmenu #bg-two {
+  height: 59px;
+  z-index: 0.2;
+  background: url('images/bg.png');
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 0.3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 0.4;
+
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 0.5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 15px;
+  text-decoration: none;
+}
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #001F3D;
+  background: -moz-linear-gradient(top, #001F3D 0%, #001F3D 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #001F3D), color-stop(100%, #001F3D));
+  background: -webkit-linear-gradient(top, #001F3D 0%, #001F3D 100%);
+  background: -o-linear-gradient(top, #001F3D 0%, #001F3D 100%);
+  background: -ms-linear-gradient(top, #001F3D 0%, #001F3D 100%);
+  background: linear-gradient(to bottom, #001F3D 0%, #001F3D 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('images/bg.png');
+  color: #ffffff;
+}
+
+					
+/*#table {
+    width: 415px;
+	height: 15%;
+	}					
+	*/				
+/*table {
+    border-collapse: collapse;
+	margin: 0 auto;
+	}
+*/
+/*table, td, th {
+    border: 1px solid #00263B;
+	color: black;
+	padding: 3px;
+	}			
+			
+td,th{
+	background-color: white;	
+	}
+	*/		
+/* form Style */
+
+form.project_main_form{
+	/*background: -webkit-gradient(linear, bottom, left 175px, from(#00263B;), to(#00263B;));
+	background: -moz-linear-gradient(bottom, #00263B, #00263B, 175px);*/
+	margin:auto;
+	position:relative;
+	width:550px;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-size: 14px;
+	font-style: italic;
+	font-weight: bold;
+	color: #00263B;
+	text-decoration: none;
+	border-radius: 10px;
+	padding:10px;
+	border: 1px solid #00263B;
+	border: inset 1px solid #00263B;
+	-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	}
+
+
+input.project_form{
+	width:415px;
+	display:block;
+	border: 1px solid #999;
+	}
+
+
+textarea#description {
+	width:415px;
+	height:150px;
+		}
+
+textarea#description {
+	display:block;
+		}
+
+input#submit{
+	width:100px;
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	background:#00263B;
+	color:#fff;
+	font-family: Arial, Helvetica, sans-serif;
+	height:30px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border: 1p solid #999;
+	}
+	
+input#submit:hover{
+	background:#CFCFCF;
+	}
+
+input[type="checkbox"]{
+	width: auto;
+	display: inline-block;
+	}
+
+/*form style */ 					
+					
+
+/* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+
+#middle { 
+		background-color:#CFCFCF;
+		}
+/* Make Footer Sticky */
+
+footer {
+    height: 100px;
+    background: #eee;
+	}
+				
+#footer_container:hover {
+    color:red;
+	}
+	
+/* table styling 
+
+table.mytable { border-collapse: collapse; border: 1px solid #839E99; 
+background: #f1f8ee; font: .9em/1.2em Georgia, "Times New Roman", Times, serif; color: #033; }
+.mytable caption { font-size: 1.3em; font-weight: bold; text-align: left; padding: 1em 4px; }
+.mytable td, th { padding: 3px 3px .75em 3px; line-height: 1.3em; }
+.mytable th { background: #00263B; color: #fff; font-weight: bold; text-align: left; padding-right: .5em; vertical-align: top; }
+.mytable thead th { background: #2C5755; text-align: center; }
+.mytable .odd td { background: #DBE6DD; }
+.mytable .odd th { background: #6E8D88; }
+.mytable td a, td a:link { color: #325C91; }
+.mytable td a:visited { color: #466C8E; }
+.mytable td a:hover, td a:focus { color: #1E4C94; }
+.mytable th a, td a:active { color: #fff; }
+.mytable tfoot th, tfoot td { background: #2C5755; color: #fff; }
+.mytable th + td { padding-left: .5em; }
+*/
+* {font-family: Helvetica Neue, Arial, sans-serif; }
+
+/*body { background-image: linear-gradient(#aaa 25%, #000);}*/
+
+.admin_form { text-align: center; }
+
+table {border-collapse: collapse; width: 80%; margin: 0 auto  }
+
+th, td {border-collapse: collapse; padding: 1.5rem; font-size: 1.3rem;  }
+
+th {background-color:#FFF  }
+
+
+#alternateRows:nth-child(even) {background: #B8B8B8}
+#alternateRows:nth-child(odd) {background: #E6E6E6}
+/*tr {background: hsl(50, 50%, 80%); }
+
+tr, td { transition: .4s ease-in; } 
+
+tr:first-child {background: hsla(12, 100%, 40%, 0.5); }
+
+tr:nth-child(even) { background: hsla(50, 50%, 80%, 0.7); }
+
+td:empty {background: hsla(50, 25%, 60%, 0.7); }
+
+tr:hover:not(#firstrow), tr:hover td:empty {background: #ff0; pointer-events: visible;}
+tr:hover:not(#firstrow) { transform: scale(1.2); font-weight: 700; box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);}
+*/
+.col {
+  width: 150px; /* set to whatever width works for you */
+  float: left; /* put the columns next to each other */
+  margin-right: 15px; /* add some space between columns */
+}
+
+#calendar {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 10px;
+}

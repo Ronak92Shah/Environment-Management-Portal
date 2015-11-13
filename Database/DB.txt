@@ -1,0 +1,74 @@
+
+DROP TABLE booking;
+DROP TABLE bookingStatus;
+DROP TABLE project;
+DROP TABLE application;
+DROP TABLE releasePackage;
+DROP TABLE testingPhase;
+DROP TABLE environment;
+
+
+CREATE TABLE environment (
+envName varchar(100),
+primary key (envName));
+
+
+CREATE TABLE testingPhase (
+phaseName varchar(100),
+primary key (phaseName));
+
+CREATE TABLE releasePackage (
+releasePkgName varchar(100),
+    releasePhaseName varchar(100),
+    releaseStartDate date,
+    releaseEndDate date,
+primary key (releasePkgName, releasePhaseName),
+foreign key (releasePhaseName) REFERENCES testingPhase(phaseName));
+
+CREATE TABLE application (
+appName varchar(100),
+    appVersion varchar(100),
+    appEnvironment varchar(100),
+    appServerName varchar(100),
+    appCategory varchar(100),
+    appIPAddress varchar(100),
+primary key (appName, appEnvironment, appServerName ));
+
+
+CREATE TABLE project (
+projName varchar(100),
+    projManagerName varchar(100),
+    projManagerEmail varchar(100),
+    projTestLeadName varchar(100),
+    projTestLeadEmail varchar(100),
+    projDesc varchar(100),
+    projReleasePkg varchar(100),
+    projAppNames varchar(100),	
+primary key (projName),
+FOREIGN KEY (projReleasePkg) REFERENCES releasePackage (releasePkgName));
+
+
+CREATE TABLE bookingStatus (
+statusValue varchar(100),
+primary key (statusValue));
+
+
+CREATE TABLE booking (
+requestID int AUTO_INCREMENT,
+    bookingProjName varchar(100),
+    bookingReleasePkg varchar(100),
+    bookingEnvironment varchar(100),
+    bookingTestingPhase varchar(100),
+    bookingStatus varchar(100),
+    bookingApps varchar(100),
+    bookingStartDate date,
+    bookingEndDate date,
+primary key (requestID),
+FOREIGN KEY(bookingProjName) REFERENCES project(projName),
+FOREIGN KEY(bookingReleasePkg) REFERENCES releasePackage(releasePkgName),
+FOREIGN KEY(bookingEnvironment) REFERENCES environment(envName),
+FOREIGN KEY(bookingTestingPhase) REFERENCES testingPhase(phaseName),
+FOREIGN KEY(bookingStatus) REFERENCES bookingstatus(statusValue));
+
+INSERT INTO bookingstatus(statusValue ) VALUES ("Pending");
+INSERT INTO bookingstatus(statusValue ) VALUES ("Not Assigned");
